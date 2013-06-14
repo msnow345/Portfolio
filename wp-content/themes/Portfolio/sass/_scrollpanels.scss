@@ -1,0 +1,31 @@
+/* 
+    Document   : Scrollpanels    
+    Author     : Dominic da Costa @ Zone
+*/
+
+
+/*************************************************************************
+ #Non Semantic Classes
+**************************************************************************/
+h1{padding-top:100px;}
+
+.scrollpanels {position:relative;overflow:hidden;float:none;}
+.scrollpanels .content{overflow:hidden;padding:0; margin:0;position:relative;}
+.scrollpanels .wrapper{position:relative;width:99999px; overflow:hidden;padding:0; margin:0;}
+.scrollpanels .wrapper .panel{float:left;height:auto;position:relative;list-style:none;}
+.scrollpanels .wrapper .panel img{display:block;width:100% !important;padding:0; margin:0;float:none;overflow:hidden;}
+
+.scrollpanels .controls{float:right;}
+.scrollpanels .controls .btn{margin:0 0.1em 0 0;}
+.scrollpanels .controls .counters{ float:left;margin-right:1em;}
+.scrollpanels .controls .counters .btn{margin:0 0.5em 0 0;}
+
+.hero-unit .scrollpanels .wrapper .panel{padding-right:10px; margin:0;}
+.hero-unit .scrollpanels .controls{margin:1em 0 0;float:right;}
+
+.fade-effect .scrollpanels .wrapper{min-height:700px;}
+.fade-effect .scrollpanels .wrapper .panel{position:absolute;z-index:0;opacity:0;}
+.fade-effect .scrollpanels .wrapper .active{z-index:1 !important;opacity:1;}
+
+.btn {background-color: #F5F5F5;background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6); background-repeat: repeat-x;border-color: #E6E6E6 #E6E6E6 #B3B3B3; border-radius: 4px 4px 4px 4px;border-style: solid;border-width: 1px;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05); color: #333333;cursor: pointer;display: inline-block;font-size: 13px;line-height: 18px;margin-bottom: 0;padding: 4px 10px;text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);vertical-align: middle;}
+.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {background-color: #E6E6E6;}

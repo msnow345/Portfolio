@@ -1,0 +1,88 @@
+/**
+ * Global styles
+ *
+ * @author			Zone
+ * @email				hello@thisiszone.com
+ * @url					http://www.thisiszone.com/
+ * @copyright   Copyright (c) 2012, thisiszone.com. All rights reserved.
+ * @version			0.0.1
+ */
+
+
+// This is compiled with less.php
+@import "_base.scss"; // contains reset and common variables 
+@import "_vendor.scss"; // contains all vendor prefixes for CSS3 so you don't have to.
+@import "_mixins.scss"; // commonly used mixins
+@import "_reset.scss"; // reset everything
+@import "_1k-fixed-grid.scss"; // choose from one of the four grids in the sass folder: 1k grid, 1k fluid, semantic fixed & semantic fluid 
+@import "_typography.scss"; // commonly used typographic page elements - carried throughout all media
+@import "_forms.scss"; // commosnly used typographic page elements - carried throughout all media
+@import "_common-elements.scss"; // commonly used typographic page elements - carried throughout all media
+@import "_accordion.scss";
+@import "_scrollpanels.scss";
+@import "_listings.scss";
+
+/*-----------------------------------------------------------------------------
+Layout
+-------------------------------------------------------------------------------*/
+#page-wrapper {margin: 0 auto;}
+
+/*-----------------------------------------------------------------------------
+Header
+-------------------------------------------------------------------------------*/
+.header {width:978px;margin:0 auto;display:none;}
+
+/*-----------------------------------------------------------------------------
+Navigation
+-------------------------------------------------------------------------------*/
+
+.nav-skip { position: absolute; overflow: hidden; top:0; left: 0; width: 200px; height: 20px; 
+	a { display: block; color: $color-text; position: absolute; left:-300px;top: 0;}
+	a:focus, a:active { left: 0; outline: 0; }
+}
+
+/*-----------------------------------------------------------------------------
+// breadcrumb 
+-------------------------------------------------------------------------------*/
+.breadcrumb{margin-bottom:$spacing;}
+.breadcrumb a{@include inline-block(); text-transform:capitalize;}
+.breadcrumb span{color:$color-text;padding-right:$spacing/6}
+.breadcrumb span.active{color:$color-heading; font-weight:800;text-transform:capitalize;}
+.breadcrumb i.chevron{color:$color-text;font-weight:800;padding:0 $spacing/6;}
+
+/*-----------------------------------------------------------------------------
+Content 
+-------------------------------------------------------------------------------*/
+
+.container {width:978px;margin:0 auto;}
+
+/*-----------------------------------------------------------------------------
+Footer
+-------------------------------------------------------------------------------*/
+
+.footer {width:978px;margin:0 auto;display:none;}
+
+/*-----------------------------------------------------------------------------
+Non Semantic Classes
+-------------------------------------------------------------------------------*/
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden;}
+.hide { display: none;}
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix{@include clearfix();}
+.alignleft {float:left;}
+.alignright {float:right;}
+.clear {clear:both;}
+.printonly {display:none;}
+.small {font-size:0.835em;}
+.large {font-size:1.385em;}
+
+/*-----------------------------------------------------------------------------
+Non Semantic Classes
+-------------------------------------------------------------------------------*/
+
+img {display:none;}

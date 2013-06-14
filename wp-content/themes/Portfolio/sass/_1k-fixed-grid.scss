@@ -1,0 +1,89 @@
+/**
+* Grid styles
+*
+* $author			Dominic da Costa $ Zone
+* $email			ddacosta$thisiszone.com
+* $url				http://www.thisiszone.com/
+* $copyright  Copyright (c) 2012, thisiszone.com. All rights reserved.
+* $version		1.0.0
+*/
+
+
+//Variables ------------------------------------------------------------------------------------------------------------------------
+$grid-width:                            1000px;
+$grid-column-width:             				65px;
+$grid-gutter-width:               			20px;
+
+
+//Functions -----------------------------------------------------------------------------------------------------------------------
+@mixin column($size:1, $padding:$grid-gutter-width){
+    width: ($grid-column-width * $size) + ($grid-gutter-width * ($size - 1))  -  ($padding * 2);                        // width + inner margin  - padding   
+    margin: 0 $grid-gutter-width $grid-gutter-width 0;                                                                  // no left margin on grid!   
+    padding:$padding;
+    float:left;
+}
+
+@mixin offset($size:1){
+    margin: 0 $grid-gutter-width $grid-gutter-width ($grid-column-width * $size) + ($grid-gutter-width * $size);        // width + inner margin
+    float:none;
+}
+
+@mixin span-last{margin-right:0;} 
+
+//Grid ------------------------------------------------------------------------------------------------------------------------------
+.grid{width:$grid-width; padding:0; float:none; zoom:1;border-bottom:1px dotted; margin:$grid-gutter-width 0;  background:rgba(255,0,0,0.05);}
+.grid:before, .grid:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.grid:after { clear: both; }
+.grid [class*="span"]{background:#dfdfdf; height: 65px;}
+
+//Row ------------------------------------------------------------------------------------------------------------------------------
+.row{display:block;  margin:0; padding: 0;width:100%; float:none; zoom: 1; }
+.row:before, .row:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.row:after { clear: both; }
+
+//Columns with padding --------------------------------------------------------------------------------------------------------
+.spanppad1{@include column(1);}
+.spanp2{@include column(2);}
+.spanp3{@include column(3);}
+.spanp4{@include column(4);}
+.spanp5{@include column(5);}
+.spanp6{@include column(6);}
+.spanp7{@include column(7);}
+.spanp8{@include column(8);}
+.spanp9{@include column(9);}
+.spanp10{@include column(10);}
+.spanp11{@include column(11);}
+.spanp12{@include column(12);@include span-last;}
+
+//Columns without padding ----------------------------------------------------------------------------------------------------
+.span1{@include column(1,0);}
+.span2{@include column(2,0);}
+.span3{@include column(3,0);}
+.span4{@include column(4,0);}
+.span5{@include column(5,0);}
+.span6{@include column(6,0);}
+.span7{@include column(7,0);}
+.span8{@include column(8,0);}
+.span9{@include column(9,0);}
+.span10{@include column(10,0);}
+.span11{@include column(11,0);}
+.span12{@include column(12,0);@include span-last;}
+
+
+//Offsets --------------------------------------------------------------------------------------------------------------------------
+.offset1{@include offset(1);}
+.offset2{@include offset(2);}
+.offset3{@include offset(3);}
+.offset4{@include offset(4);}
+.offset5{@include offset(5);}
+.offset6{@include offset(6);}
+.offset7{@include offset(7);}
+.offset8{@include offset(8);}
+.offset9{@include offset(9);}
+.offset10{@include offset(10);}
+.offset11{@include offset(11);}
+
+//Remove the gutter from the last span of any container -------------------------------------------------------------------
+[class*="span"]:last-child {
+    @include span-last;
+}

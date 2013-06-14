@@ -1,0 +1,46 @@
+/**
+* Grid styles
+*
+* $author			Dominic da Costa $ Zone
+* $email			ddacosta$thisiszone.com
+* $url				http://www.thisiszone.com/
+* $copyright  Copyright (c) 2012, thisiszone.com. All rights reserved.
+* $version		1.0.0
+*/
+
+
+//Variables ------------------------------------------------------------------------------------------------------------------------
+$grid-width:                            1000px;
+$grid-columns:			             				12;
+$grid-column-width:											$grid-width / $grid-columns;
+$grid-gutter-width:               			20px;
+
+
+//Functions -----------------------------------------------------------------------------------------------------------------------
+@mixin column($size:1, $padding:$grid-gutter-width){
+    width: ($grid-column-width * $size) + ($grid-gutter-width * ($size - 1))  -  ($padding * 2);                        // width + inner margin  - padding   
+    margin: 0 $grid-gutter-width $grid-gutter-width 0;                                                                  // no left margin on grid!   
+    padding:$padding;
+    float:left;
+}
+
+@mixin offset($size:1){
+    margin: 0 $grid-gutter-width $grid-gutter-width ($grid-column-width * $size) + ($grid-gutter-width * $size);        // width + inner margin
+    float:none;
+}
+
+@mixin span-last{margin-right:0;} 
+
+//Grid ------------------------------------------------------------------------------------------------------------------------------
+.grid{width:$grid-width; margin:0 auto; padding:0; float:none; zoom: 1}
+.grid:before, .grid:after { content: "\0020"; display: block; height: 0; overflow: hidden;}
+.grid:after {clear: both;}
+
+//Row ------------------------------------------------------------------------------------------------------------------------------
+.row{display:block;  margin:0; padding: 0;width:100%; float:none; zoom: 1;}
+.row:before, .row:after {content: "\0020"; display: block; height: 0; overflow: hidden;}
+.row:after {clear: both;}
+
+//Demo --------------------------------------------------------------------------------------------------------------------------
+.demo .row{border-bottom:1px dotted; margin:$grid-gutter-width 0;  background:rgba(255,0,0,0.05);}
+.demo [class*="span"]{background:#dfdfdf; height: 65px;}

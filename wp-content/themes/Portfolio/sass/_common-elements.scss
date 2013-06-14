@@ -1,0 +1,33 @@
+
+// Use: Common Elements
+// Theme: npc
+// Copyright 2012, Zone
+// Author: Emma Lewis
+
+
+/* Table of Contents
+  
+
+/* #Buttons ------------------------------------------------------------------------ */
+
+.button,
+.button:visited {background-color:$color-link; padding:$spacing/4 $spacing/2; @include inline-block();color:white; cursor:pointer;@include cubic-bezier-transition();border:none;}
+.button:hover,
+.button:focus {background:$color-purple;}
+
+/* #Icons ------------------------------------------------------------------------ */
+
+.icon {background: url('../img/icon-sprite.png') no-repeat;width:16px; height: 16px;}
+
+.icon-email {background-position: 0 13px;}
+.icon-print {background-position: -90px 13px;}
+.icon-tweet {background-position: -173px 13px;}
+.icon-share {background-position: -266px 13px;margin-right:0;width:10px;}
+
+a:hover .icon,
+a:focus .icon {border-bottom:none;}
+a:focus .icon {outline:1px dotted;}
+
+/* #Dividers ------------------------------------------------------------------------ */
+
+.separator {border-bottom: 1px solid $color-separator; margin: $spacing 0 $spacing; padding-bottom:$spacing;}

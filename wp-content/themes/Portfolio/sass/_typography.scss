@@ -1,0 +1,166 @@
+/*
+// Use: Typographic base styling
+// Theme: Zone V0.1
+// Parent Theme: milk V0.1
+// Copyright 2011, Zonecontent
+// Author: Tim Reed
+
+/* Table of Contents
+#Fonts
+#Blockquotes
+#Links
+#Lists
+#Images
+#Figures
+#Tables
+#File Types
+*/
+
+
+/* #Fonts ------------------------------------------------------------------------ */
+
+body {padding: 0; margin:0;font-family: $font-copy; color: $color-text; font-size: 16px; line-height: 1.467em;}
+
+h1, h2, h3, h4, h5, h6 {color: $color-heading; font-family: $font-heading; font-weight: 400;line-height: 1.467em;margin: 0 0 $spacing;}
+
+h1 { font-size: 4.267em; }                                                                                                                                                            /* 64px */
+h2 { font-size: 2.133em;}                                                                                                                                                             /* 32px */
+h3 { font-size: 1.600em; }                                                                                                                                                            /* 24px */
+h4, h5, h6 { font-size: 1.067em;}                                                                                                                                                /* 16px */
+
+p { margin: 0 0  $spacing/2 0; }                                   
+p img { margin: 0; }
+
+em { font-style: italic; }
+strong { font-weight: 800; color:$color-heading;}
+small { font-size: 80%; }
+
+// #Blockquotes ---------------------------------------------------------------
+blockquote,  { font-size: 2.133em; line-height: 1.125em; color:$color-purple; padding:0 0 1.467em;margin-bottom: $spacing;position:relative;}                /* 32px  */
+blockquote p{ font-size:1em;  }
+blockquote:before { content: '"'; font-family:$font-heading;}
+blockquote:after { content: '"'; font-family:$font-heading;}
+blockquote .source { display: block; font-size: 0.469em; color: $color-text; position:absolute; bottom:0;}                                                                             /* 15px */
+blockquote .source a,
+blockquote .source a:visited,
+blockquote .source a:visited {color: $color-text;}
+
+hr {border: solid $color-separator; border-width: 1px 0 0; clear: both; margin: $spacing 0 $spacing * 1.5; height: 0;}
+br {clear: both; margin: $spacing 0 $spacing * 1.5; height: 0; }
+
+
+// #Links ---------------------------------------------------------------------
+a, a:visited {color: $color-link; text-decoration: none; outline: 0; @include cubic-bezier-transition();border-bottom:1px dotted transparent;}
+a:hover, a:focus {color: $color-link;text-decoration: none;  border-color:$color-link;}
+a:active{ color: $color-link-hover;text-decoration: none;  border-color:transparent;}
+p a, p a:visited {line-height: inherit; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{color:inherit;font-weight: inherit;}
+
+
+// #Lists ---------------------------------------------------------------------
+
+ul, ol, dl {margin-bottom: 1.25em;} 
+ul {list-style: none outside;}
+ol {list-style: decimal;}
+ol, ul.square, ul.circle, ul.disc { margin-left: 30px;}
+ul.square {list-style: square outside;}
+ul.circle {list-style: circle outside;}
+ul.disc {list-style: disc outside;}
+ul ul, ul ol,
+ol ol, ol ul {margin: 0.75em 0 0.3125em 1.875em;}
+ul ul li, ul ol li,
+ol ol li, ol ul li {margin-bottom: 6px;}
+li {margin-bottom: 0.75em;} 
+ul.large li {line-height: 21px;}
+
+dt {margin-bottom: 0.75em;}
+dd {margin-bottom: 0.75em;}
+
+.nav ul {margin:0; padding:0; list-style-type:none;}
+.nav li {display:inline; margin:0; padding:0; list-style-type:none;}
+
+// #Images --------------------------------------------------------------------
+
+img.scale-with-grid {max-width: 100%;height: auto;}
+
+img.right {float: right; margin-bottom: 8px; margin-right: 16px;}
+img.left {float:left; margin-right: 16px;}
+img.center {display: block; margin: 0 auto;}
+
+// #Figures -------------------------------------------------------------------
+
+figure {padding: 0.25em; margin-bottom: 0.5em;}
+figcaption {display:block; font-style: italic; text-align: center;}
+
+
+// #Text resizer --------------------------------------------------------------------
+
+body.small {font-size:1em;}
+body.medium {font-size:1.5em;}
+body.large {font-size:2em;}
+
+
+// #File Types -------------------------------------------------------------------
+
+a[target='_blank']:after {
+    background: url("../images/icons-sprite.png") no-repeat scroll -16px -174px transparent;
+    content: "";
+    float: right;
+    height: 16px;
+    margin-left: 2px;
+    width: 16px;
+}
+/*a[href^='http:'] {
+@include inline-block();
+padding-left:20px;
+line-height:18px;
+background:transparent url(../images/icons-sprite.png) -16px -198px no-repeat;
+}*/
+a[href^="mailto:"] {
+    @include inline-block();
+    padding-left:20px;
+    background-image: url(../images/icons-sprite.png);
+    background-position:-16px -224px ;
+    background-repeat:no-repeat;
+}
+a[href$='.pdf'] {
+    @include inline-block();
+    padding-left:20px;
+    background-image: url(../images/icons-sprite.png);
+    background-position:-16px -81px;
+    background-repeat:no-repeat;
+}
+a[href$='.xls'], a[href$='.csv'], a[href$='.xlt'], a[href$='.xlw'] {
+    @include inline-block();
+    padding-left:20px;
+    background-image: url(../images/icons-sprite.png);
+    background-position:-16px -8px;
+    background-repeat:no-repeat;
+}
+a[href$='.ppt'], a[href$='.pps'] {
+    @include inline-block();
+    padding-left:20px;
+    background-image: url(../images/icons-sprite.png);
+    background-position:-16px -56px;
+    background-repeat:no-repeat;
+}
+a[href$='.doc'], a[href$='.rtf'], a[href$='.txt'], a[href$='.wps'] {
+    @include inline-block();
+    padding-left:20px;
+    background-image: url(../images/icons-sprite.png);
+    background-position: -16px -32px;
+    background-repeat:no-repeat;
+}
+a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'] {
+    @include inline-block();
+    padding-left:20px;
+    background-image: url(../images/icons-sprite.png);
+    background-position: -16px -104px ;
+    background-repeat:no-repeat;
+}
+
+.filesize, .sup, sup {vertical-align: baseline;font-size: 0.8em; position: relative;top: -0.4em;}
+
+
+

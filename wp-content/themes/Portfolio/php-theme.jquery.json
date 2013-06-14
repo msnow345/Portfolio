@@ -1,0 +1,29 @@
+{
+  "name": "php-theme",
+  "title": "Php Theme",
+  "description": "Starter theme for basic PHP site",
+  "version": "0.1.0",
+  "homepage": "https://zonecode.codebasehq.com/projects/themes/notebook",
+  "author": {
+    "name": "Zone",
+    "email": "frontend@thisiszone.com",
+    "url": "thisiszone.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://codebasehq.com/zonecode/themes/php-template.git"
+  },
+  "bugs": {
+    "url": "https://zonecode.codebasehq.com/projects/themes/tickets?report=all"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://zonecode.codebasehq.com/projects/themes/notebook/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}

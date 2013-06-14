@@ -1,0 +1,57 @@
+/**
+* Base Styles
+*
+* $author			Zone
+* $email			hello$thisiszone.com
+* $url				http://www.thisiszone.com/
+* $copyright  Copyright (c) 2012, thisiszone.com. All rights reserved.
+* $version		0.0.1
+*/
+
+
+/* COLOURS
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+// Colours ------------------------------------------------------------------------------------------------------------------------
+
+$color-purple:                            #433489;
+$color-pink:                            	#d9237c;
+$color-grey:				                      #41413e;
+$color-light-grey:				                #f2f2f0;
+
+// Colour classes ------------------------------------------------------------------------------------------------------------------------
+
+.purple {background-color:$color-purple; margin:0 0 0.5em 0;color:white; padding:4px;}
+.pink {background-color:$color-pink; margin:0 0 0.5em 0;color:white; padding:4px;}
+.grey {background-color:$color-grey; margin:0 0 0.5em 0;color:white; padding:4px;}
+.light-grey {background-color:$color-light-grey; margin:0 0 0.5em 0;color:black; padding:4px;}
+
+// Text -----------------------------------------------------------------------------------------------------------------------------
+
+$color-text:                              $color-grey;
+$color-heading:                           $color-purple;
+
+//  Links ---------------------------------------------------------------------------------------------------------------------------
+
+$color-link:                              $color-pink;
+$color-link-visited:                      $color-purple;
+$color-link-hover:                        $color-purple;
+$color-link-active:                       $color-purple;
+
+// Backgrounds ------------------------------------------------------------------------------------------------------------------
+
+$color-bg:                                $color-light-grey;  
+$color-separator:                         $color-grey;
+
+
+/* SPACING
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+$spacing:                                 20px;
+
+
+/* FONTS
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+$font-copy:                               helvetica,arial,clean,sans-serif;
+$font-heading:                            'Helvetica Neue', Arial, sans-serif;

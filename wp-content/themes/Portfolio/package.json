@@ -1,0 +1,12 @@
+{
+  "name": "php-theme",
+  "title": "Zone PHP Theme",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "contributors": [
+    " Your Name"
+  ],
+  "company": "Zone"
+}

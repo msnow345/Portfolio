@@ -1,0 +1,15 @@
+/* #Accordion -------------------------------------------------------------------*/
+
+		.accordion {clear:both;border:solid 1px $color-separator;}
+	
+		.accordion .accordion-btn {font-size: 1.231em; border-top:solid 1px $color-separator;position: relative; line-height: 2em; padding: 0 2em 0 $spacing;margin:0;@include linear-gradient($color-purple,lighten($color-purple,10%)); color:white;}
+		.accordion .accordion-btn:first-child {border:0 none;}
+		.accordion .accordion-btn a {color:white;}
+		.accordion .accordion-btn .iconwrapper {border-left:solid 1px white; position: absolute; right: 0; width: 2em; height: 100%; bottom:0; top:0;}
+		.accordion .accordion-btn .icon {background: url(../images/icon-plus.png) no-repeat center center transparent;position: absolute; right: 0; width: 2em; height: 100%; bottom:0; top:0;}
+		.accordion .open .icon {background-image: url(../images/icon-minus.png);}
+		.accordion .accordion-content {border-bottom:solid 1px white; padding: 16px $spacing; border: medium none; padding: 0; overflow:hidden;}
+		.accordion .accordion-content .field-name-body {width: 70%;}
+		.accordion .accordion-content .field-type-image {width: 25%; float:left; margin-right:$spacing;}
+		.accordion .article { margin:0; padding: $spacing; @include clearfix();}
+		.accordion .article:first-child {border-top:solid 1px;}
