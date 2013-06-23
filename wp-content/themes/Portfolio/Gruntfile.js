@@ -49,14 +49,13 @@ module.exports = function(grunt) {
         }
       }
     },
-    sass: {     
+    compass: {     
       dev: {
         options: {
-          style: 'expanded'
+          outputStyle: 'expanded',
+          sassDir:'sass',
+          cssDir:'css'
         },
-        files: {
-          'css/global.css': 'sass/global.scss'
-        }
       },
       prod: {
         options: {
@@ -79,9 +78,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+   grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass:dev', 'jshint:all']);
-  grunt.registerTask('prod', ['sass:prod', 'concat', 'uglify']);
+  grunt.registerTask('default', ['compass:dev', 'jshint:all']);
+  grunt.registerTask('prod', ['compass:prod', 'concat', 'uglify']);
 
 };

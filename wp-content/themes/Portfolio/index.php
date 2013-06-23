@@ -16,51 +16,73 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
-		<?php if ( have_posts() ) : ?>
+<nav class="main-nav">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+	<div class="main-nav-face-1-wrapper">
+		<div class="main-nav-face main-nav-face-1">
+			
+		</div>
+	</div>	
+	
+	<div class="main-nav-face-4-wrapper">
+		<div class="main-nav-face main-nav-face-4">
+			<div class="menu-bar"></div>
+			<div class="menu-bar"></div>
+			<div class="menu-bar"></div>
+		</div>
 
-			<?php twentytwelve_content_nav( 'nav-below' ); ?>
+		<div class="main-nav-face main-nav-backface">
+			X
+		</div>
+	</div>
 
-		<?php else : ?>
+	<div class="standfirst">Here to skip</div>
 
-			<article id="post-0" class="post no-results not-found">
+</nav>
 
-			<?php if ( current_user_can( 'edit_posts' ) ) :
-				// Show a different message to a logged-in user who can add posts.
-			?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'No posts to display', 'twentytwelve' ); ?></h1>
-				</header>
+<section class="main-container">
+	<div class="top-header-wrapper">
+		<h1 class="main-heading">
+			<span class="heading-normal">The portfolio of <span class="heading-stylised">mikesnow</span><br />
+			 a <span class="heading-stylised">front end developer</span><br />
+			  based in <span class="heading-stylised">london <span class="flag-container">uk<span class="icon"></span></span></span></span>
+		</h1>
+	</div>	
 
-				<div class="entry-content">
-					<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'twentytwelve' ), admin_url( 'post-new.php' ) ); ?></p>
-				</div><!-- .entry-content -->
+<section class="scroll-down-wrapper">
 
-			<?php else :
-				// Show the default message to everyone else.
-			?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
-				</header>
+	<span class="scroll-down">scroll down</span>
 
-				<div class="entry-content">
-					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twentytwelve' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .entry-content -->
-			<?php endif; // end current_user_can() check ?>
+</section>
 
-			</article><!-- #post-0 -->
+	<div class="second-header-wrapper">
+		<h2 class="second-heading">
+			<span class="heading-normal">Let's get <span class="heading-stylised">right to it</span><br />
+		</h2>
+	</div>	
 
-		<?php endif; // end have_posts() check ?>
+	<article class="video-header-wrapper">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/timelapse/frame-0.png" class="timelapse">
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		<div class="colour-overlay">
+			
+			<h2 class="second-heading">
+			<span class="heading-normal">I love<span class="heading-stylised">building for the ever-changing web</span><br />
+		</h2>
 
-<?php get_sidebar(); ?>
+			<img src="<?php echo get_template_directory_uri(); ?>/images/timelapse/frame-0.png" class="timelapseheight">
+		</div>
+
+	</article>	
+
+	<div class="top-header-wrapper">
+		<h1 class="main-heading">
+			<span class="heading-normal">The portfolio of <span class="heading-stylised">mikesnow</span><br />
+			 a <span class="heading-stylised">front end developer</span><br />
+			  based in <span class="heading-stylised">london <span class="flag-container">uk<span class="icon"></span></span></span></span>
+		</h1>
+	</div>	
+
+</section>
+
 <?php get_footer(); ?>
